@@ -1,0 +1,434 @@
+body {
+    margin: 0px;
+
+    font-family: "Poppins", sans-serif;
+
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    right: 0;
+    z-index: 10;
+    color: #fff;
+}
+
+/* INICIO */
+.inicio {
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: #0c0102;
+}
+
+.inicio::before {
+    content: "";
+    background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+
+.inicio-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.inicio-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title,
+.inicio-img,
+.subtitle {
+    z-index: 3;
+    position: relative;
+}
+
+/* TITLE */
+.title {
+    margin: 0px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    transform: translateY(-50px);
+    left: 60px;
+}
+
+.title h1 {
+    margin: 0;
+    color: #fff;
+    padding: 0px;
+    font-size: 66px;
+    font-style: bold;
+    font-family: "Cinzel", serif;
+}
+
+.title p {
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    padding: 0px;
+}
+
+/* PERSONAGEM */
+.inicio-img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.inicio-img img {
+    height: 100vh;
+    width: auto;
+    object-fit: contain;
+    position: relative;
+}
+
+/* SUBTITLE */
+.subtitle {
+    color: #fff;
+    align-items: center;
+    right: 60px;
+    position: relative;
+    transform: translateY(-50px);
+    max-width: 400px;
+    text-align: right;
+}
+
+.subtitle h3 {
+    font-size: 37px;
+    font-weight: 400;
+}
+
+.subtitle p {
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    max-width: 220px;
+    border-bottom: 2px solid #fff;
+    border-width: 5px;
+    margin-left: auto;
+}
+
+.subtitle p img {
+    padding-left: 10px;
+}
+
+/* TICKETS SECTION */
+.tickets-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: -2px;
+    z-index: 3;
+    color: #fff;
+    background-color: #0c0102;
+    position: relative;
+}
+
+.tickets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+    margin: 0px 40px;
+}
+
+.tickets h2 {
+    display: flex;
+    color: #fff;
+    margin-left: 40px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.tickets p {
+    font-size: 17px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    max-width: 400px;
+    border-bottom: 2px solid #fff;
+    border-width: 5px;
+    margin-right: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 70px;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.tickets-cards {
+    position: relative;
+    overflow: hidden;
+}
+
+.tickets-cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.space {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.space h3,
+.space p {
+    margin: 0;
+}
+
+/* TICKETS2 */
+.tickets2 {
+    position: relative;
+    background-image: url(img/backg2.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-top: -2px;
+}
+
+.tickets2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(12, 1, 2, 0.65);
+}
+
+.netflix-clio-fever {
+    display: flex;
+    justify-content: space-around;
+    z-index: 4;
+    position: relative;
+    padding-top: 230px;
+}
+
+.tickets2-infos {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    z-index: 4;
+    position: relative;
+    gap: 20px;
+    padding: 60px 40px;
+    margin: 40px 10px;
+}
+
+.tickets2-infos-infos {
+    max-width: 300px;
+}
+
+/* CIDADES */
+.cidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #0c0102;
+    flex-direction: column;
+    z-index: 4;
+    margin-top: -2px;
+}
+
+.cidades h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.cidades ul {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+}
+
+.cidades ul li {
+    padding: 40px;
+}
+
+/* FOOTER */
+footer {
+    background-image: url(img/background-3.png);
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    margin-top: -20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* H2 do Footer */
+footer h2 {
+    color: rgba(191, 191, 191, 0.8);
+    font-size: 12vw;
+    font-family: "Benguiat", sans-serif;
+    mix-blend-mode: color-dodge;
+    display: inline-block;
+    white-space: nowrap;
+    animation: slide 10s linear infinite;
+    padding-left: 8vw;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+}
+
+/* RODAPE */
+.rodape {
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    z-index: 4;
+    padding-top: 200px;
+    align-items: center;
+    position: relative;
+}
+
+.rodape-logo p {
+font-size: 30px;
+font-weight: 500;
+font-style: bold;
+
+}
+
+.rodape-logo h1 {
+font-size: 51px;
+
+font-style:bold;
+ font-family: "Cinzel", serif;
+}
+
+.rodape-logo p,
+.rodape-logo h1 {
+  margin: 0;
+  padding: 5px;
+}
+
+.rodape-parceiro h4,
+.rodape-parceiro img {
+  margin: 0;
+ padding: 10px;
+}
+
+.rodape-institucional h4,
+.rodape-institucional ul {
+  margin: 0;
+ padding: 10px;
+}
+
+.rodape-social h4,
+.rodape-social ul {
+  margin: 0;
+  padding: 10px;
+}
+
+.rodape-logo {
+    width: 350px;
+    height: auto;
+    
+}
+
+
+
+
+
+
+.rodape-infos {
+    display: flex;
+    gap: 20px;
+}
+
+/* SOCIAL */
+
+
+.rodape-social ul {
+    display: flex;
+    gap: 16px;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+/* INSTITUCIONAL */
+.rodape-institucional ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.rodape-institucional ul li {
+   gap: 10px;
+   padding-left: 10px;
+    font-size: 18px;
+}
+
+/* NETFLIX + FEVER */
+.netflix-fever {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0px 40px;
+}
+
+/* ANIMAÇÃO */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
