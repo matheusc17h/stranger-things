@@ -1,168 +1,175 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stranger Things</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Stranger Things: The Experience</title>
+    <meta name="description" content="Descubra os seus poderes e vire o herói de sua própria aventura. Escolha sua cidade e garanta seu ingresso para Stranger Things: The Experience.">
+    <meta name="theme-color" content="#0c0102">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Stranger Things: The Experience">
+    <meta property="og:description" content="Descubra os seus poderes e vire o herói de sua própria aventura!">
+    <meta property="og:image" content="assets/img/hero-bg-1280.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- LCP: imagens do hero descobertas antes do CSS -->
+    <link rel="preload" as="image" type="image/avif" fetchpriority="high"
+        imagesrcset="assets/img/hero-bg-800.avif 800w, assets/img/hero-bg-1280.avif 1280w, assets/img/hero-bg-1920.avif 1920w"
+        imagesizes="100vw">
+    <link rel="preload" as="image" type="image/avif"
+        imagesrcset="assets/img/hero-cast-800.avif 800w, assets/img/hero-cast-1280.avif 1280w, assets/img/hero-cast-1920.avif 1920w"
+        imagesizes="(max-width: 767px) 215vw, 100vw">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <main>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
 
-        <div id="smooth-wrapper">
-            <div id="smooth-content">
+            <header class="site-header">
+                <span class="brand">GC.</span>
+                <span class="brand">NETFLIX</span>
+            </header>
 
-                <header>
-                    <h3>GC.</h3>
-                    <h3>NETFLIX</h3>
+            <main>
 
-                </header>
-
-                <section class="inicio">
+                <section class="inicio" aria-labelledby="titulo">
 
                     <div class="inicio-bg" data-speed="0.6">
-                        <img src="img/background-1.png" alt="">
-
+                        <picture>
+                            <source type="image/avif"
+                                srcset="assets/img/hero-bg-800.avif 800w, assets/img/hero-bg-1280.avif 1280w, assets/img/hero-bg-1920.avif 1920w"
+                                sizes="100vw">
+                            <img src="assets/img/hero-bg-1920.webp"
+                                srcset="assets/img/hero-bg-800.webp 800w, assets/img/hero-bg-1280.webp 1280w, assets/img/hero-bg-1920.webp 1920w"
+                                sizes="100vw" width="1920" height="974" alt="" fetchpriority="high" decoding="async">
+                        </picture>
                     </div>
 
                     <div class="title">
                         <p>THE EXPERIENCE</p>
-                        <h1>STRANGER <br>THINGS</h1>
+                        <h1 id="titulo">STRANGER <br>THINGS</h1>
                     </div>
 
                     <div class="inicio-img" data-speed="0.8">
-                        <img src="img/perso-desktop.svg" alt="">
-
+                        <picture>
+                            <source type="image/avif"
+                                srcset="assets/img/hero-cast-800.avif 800w, assets/img/hero-cast-1280.avif 1280w, assets/img/hero-cast-1920.avif 1920w"
+                                sizes="(max-width: 767px) 215vw, 100vw">
+                            <img src="assets/img/hero-cast-1920.webp"
+                                srcset="assets/img/hero-cast-800.webp 800w, assets/img/hero-cast-1280.webp 1280w, assets/img/hero-cast-1920.webp 1920w"
+                                sizes="(max-width: 767px) 215vw, 100vw" width="1920" height="518"
+                                alt="Dustin, Will, Eleven, Mike e Lucas" decoding="async">
+                        </picture>
                     </div>
-
 
                     <div class="subtitle">
-                        <h3>Descubra os seus poderes e vire o herói de sua própria aventura!</h3>
-                        <p>ESCOLHA SUA CIDADE <img src="img/Vector 2.svg" alt=""></p>
-
-
-
-
-
+                        <h2>Descubra os seus poderes e vire o herói de sua própria aventura!</h2>
+                        <a class="cta" href="#ingressos">ESCOLHA SUA CIDADE <img src="assets/img/vector-2.svg" alt="" width="17" height="10"></a>
                     </div>
-
-
-
 
                 </section>
 
-
-
-                <section class="tickets-section">
+                <section class="tickets-section" id="ingressos" aria-labelledby="ingressos-titulo">
 
                     <div class="tickets">
-                        <h2>ESCOLHA SUA CIDADE</h2>
-                        <p>ESCOLHA SUA CIDADE <img src="img/Vector 2.svg" alt=""></p>
+                        <h2 id="ingressos-titulo">ESCOLHA SUA CIDADE</h2>
+                        <a class="cta" href="#cidades">VEJA TODAS AS CIDADES <img src="assets/img/vector-2.svg" alt="" width="17" height="10"></a>
                     </div>
 
                     <div class="cards">
 
-
-                        <div class="tickets-cards">
-                            <img src="img/sidney.png" alt="">
+                        <article class="tickets-cards">
+                            <picture>
+                                <source type="image/avif" srcset="assets/img/city-sidney-497.avif">
+                                <img src="assets/img/city-sidney-497.webp" width="497" height="309" alt="Experiência Stranger Things em Sidney" loading="lazy" decoding="async">
+                            </picture>
                             <div class="space">
                                 <h3>Sidney</h3>
                                 <p>Ingressos Disponíveis</p>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="tickets-cards">
-                            <img src="img/mexico.png" alt="">
+                        <article class="tickets-cards">
+                            <picture>
+                                <source type="image/avif" srcset="assets/img/city-mexico-497.avif">
+                                <img src="assets/img/city-mexico-497.webp" width="497" height="309" alt="Experiência Stranger Things no México" loading="lazy" decoding="async">
+                            </picture>
                             <div class="space">
                                 <h3>México</h3>
                                 <p>Ingressos Disponíveis</p>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="tickets-cards">
-                            <img src="img/sydney_stranger_things.png" alt="">
+                        <article class="tickets-cards">
+                            <picture>
+                                <source type="image/avif" srcset="assets/img/city-yas-497.avif">
+                                <img src="assets/img/city-yas-497.webp" width="497" height="309" alt="Experiência Stranger Things em Yas Island" loading="lazy" decoding="async">
+                            </picture>
                             <div class="space">
-                                <h3>Yas island</h3>
+                                <h3>Yas Island</h3>
                                 <p>Ingressos Disponíveis</p>
                             </div>
-                        </div>
+                        </article>
 
-
+                    </div>
 
                 </section>
 
-
-
-
-                <section class="tickets2">
+                <section class="tickets2" aria-label="O que a imprensa diz">
 
                     <div class="netflix-clio-fever">
-
-                        <img src="img/netflix-logo.svg" alt="netflix">
-                        <img src="img/clio-logo.svg" alt="clio">
-                        <img src="img/fever-logo.svg" alt="fever">
-
+                        <img src="assets/img/netflix-logo.svg" alt="Netflix" width="105" height="22" loading="lazy">
+                        <img src="assets/img/clio-logo.webp" alt="Clio" width="196" height="99" loading="lazy" decoding="async">
+                        <img src="assets/img/fever-logo.svg" alt="Fever" width="109" height="33" loading="lazy">
                     </div>
 
                     <div class="tickets2-infos">
 
-                        <div class="tickets2-infos-infos">
-                            <img src="img/image 16.svg" alt="" srcset="">
-                            <div>
-                                <p> "Guests are immersed into an original "Stranger Things" storyline...[it] combines
-                                    the special effects of a 3D Universal Studios ride with a telekinetic escape room."
-                                </p>
-                            </div>
-                        </div>
+                        <figure class="tickets2-infos-infos">
+                            <img src="assets/img/press-2.webp" alt="" width="43" height="39" loading="lazy" decoding="async">
+                            <blockquote>
+                                <p>"Guests are immersed into an original "Stranger Things" storyline...[it] combines
+                                    the special effects of a 3D Universal Studios ride with a telekinetic escape room."</p>
+                            </blockquote>
+                        </figure>
 
-                        <div class="tickets2-infos-infos">
-                            <img src="img/image 15.svg" alt="" srcset="">
-                            <div>
+                        <figure class="tickets2-infos-infos">
+                            <img src="assets/img/press-1.webp" alt="" width="65" height="38" loading="lazy" decoding="async">
+                            <blockquote>
                                 <p>"Immerse yourself on your own adventure with Eleven, Michael, Dustin, Lucas, Max
-                                    and Will for a very special episode starring none other than you."
-                                </p>
-                            </div>
-                        </div>
+                                    and Will for a very special episode starring none other than you."</p>
+                            </blockquote>
+                        </figure>
 
-                        <div class="tickets2-infos-infos">
-                            <img src="img/image 18.svg" alt="" srcset="">
-                            <div>
+                        <figure class="tickets2-infos-infos">
+                            <img src="assets/img/press-3.webp" alt="" width="165" height="41" loading="lazy" decoding="async">
+                            <blockquote>
                                 <p>"The Stranger Things Experience is a scary, endearing, hilarious, and joyous
-                                    celebration of everything we already love about the show."
-                                </p>
-                            </div>
-                        </div>
-
-
-
-
-
-
-
+                                    celebration of everything we already love about the show."</p>
+                            </blockquote>
+                        </figure>
 
                     </div>
 
-
-
                 </section>
 
-
-                <section class="cidades">
-                    <h2>OBRIGADO POR SE JUNTAR A NÓS NESTA AVENTURA EM:</h2>
+                <section class="cidades" id="cidades" aria-labelledby="cidades-titulo">
+                    <h2 id="cidades-titulo">OBRIGADO POR SE JUNTAR A NÓS NESTA AVENTURA EM:</h2>
                     <ul>
                         <li>Sidney</li>
                         <li>Sidney</li>
@@ -176,70 +183,59 @@
                     </ul>
                 </section>
 
-                <footer>
+            </main>
 
+            <footer>
 
+                <div class="rodape">
+                    <div class="rodape-logo">
+                        <p>THE EXPERIENCE</p>
+                        <p class="rodape-marca">STRANGER <br>THINGS</p>
+                    </div>
 
-                    <div class="rodape">
-                        <div class="rodape-logo">
-                            <p>THE EXPERIENCE</p>
-                            <h1>STRANGER <br>THINGS</h1>
+                    <div class="rodape-infos">
+
+                        <div class="rodape-social">
+                            <h4>REDES SOCIAIS</h4>
+                            <ul>
+                                <li><a href="#" aria-label="Facebook"><img src="assets/img/footer-facebook.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+                                <li><a href="#" aria-label="Instagram"><img src="assets/img/footer-instagram.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+                                <li><a href="#" aria-label="Twitter"><img src="assets/img/footer-twitter.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+                            </ul>
                         </div>
 
-                        <div class="rodape-infos">
-
-                            <div class="rodape-social">
-                                <h4>REDES SOCIAIS</h4>
-                                <ul>
-                                    <li><img src="img/footer-facebook.svg" alt="facebook"></li>
-                                    <li><img src="img/footer-instagram.svg" alt="instagram"></li>
-                                    <li><img src="img/footer-twitter.svg" alt="twitter"></li>
-                                </ul>
-                            </div>
-
-                            <div class="rodape-parceiro">
-                                <h4>PARCEIRO DE MÍDIA</h4>
-                                <img src="img/Frame.svg" alt="parceiro de midia">
-                            </div>
-
-                            <div class="rodape-institucional">
-                                <h4>INSTITUCIONAL</h4>
-                                <ul>
-                                    <li>Contato</li>
-                                    <li>Imprensa</li>
-                                    <li>Parcerias</li>
-                                    <li>Influenciadores</li>
-                                </ul>
-                            </div>
-
+                        <div class="rodape-parceiro">
+                            <h4>PARCEIRO DE MÍDIA</h4>
+                            <img src="assets/img/media-partner.svg" alt="Parceiro de mídia" width="154" height="68" loading="lazy">
                         </div>
+
+                        <nav class="rodape-institucional" aria-label="Institucional">
+                            <h4>INSTITUCIONAL</h4>
+                            <ul>
+                                <li><a href="#">Contato</a></li>
+                                <li><a href="#">Imprensa</a></li>
+                                <li><a href="#">Parcerias</a></li>
+                                <li><a href="#">Influenciadores</a></li>
+                            </ul>
+                        </nav>
+
                     </div>
+                </div>
 
-                    <div class="netflix-fever">
+                <div class="netflix-fever">
+                    <img src="assets/img/netflix-logo.svg" alt="Netflix" width="105" height="22" loading="lazy">
+                    <img src="assets/img/fever-logo.svg" alt="Fever" width="109" height="33" loading="lazy">
+                </div>
 
-                        <img src="img/netflix-logo.svg" alt="netflix">
-                        <img src="img/fever-logo.svg" alt="fever">
+                <div class="marquee" aria-hidden="true">
+                    <span>THE EXPERIENCE &nbsp;&nbsp;&nbsp; THE EXPERIENCE &nbsp;&nbsp;&nbsp;</span>
+                </div>
 
-                    </div>
+            </footer>
 
-                    <div>
-                        <h2>THE EXPERIENCE &nbsp;&nbsp;&nbsp; THE EXPERIENCE &nbsp;&nbsp;&nbsp;</h2>
-                    </div>
-
-                </footer>
-
-            </div>
         </div>
-    </main>
+    </div>
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>
